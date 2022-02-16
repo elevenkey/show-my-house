@@ -9,6 +9,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 import App1 from './App-1'
 import App2 from './App-2'
 
+// test
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0)
 
