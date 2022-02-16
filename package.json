@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.4.1",
@@ -14,6 +15,8 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
     "mobx": "^6.3.13",
     "mobx-react-lite": "^3.2.3",
     "react": "^17.0.2",
@@ -22,6 +25,12 @@
     "react-scripts": "5.0.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
+  },
+  "prepare": "husky install && npm install -g commitizen",
+  "lint-staged": {
+    "src/**/*.{jsx,txs,ts,js,json,vue,md}": [
+      
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
