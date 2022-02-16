@@ -12,14 +12,8 @@ import App2 from './App-2'
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0)
 
-  const userContext = React.createContext({})
-  userContext.displayName = 'hello-user'
-
-  const h = React.useContext(userContext)
-  console.log(h, '-context')
-
   return (
-    <userContext.Provider value="hello">
+    <div>
       <Box sx={{ width: '100%' }}>
         <BottomNavigation
           showLabels
@@ -37,6 +31,6 @@ export default function SimpleBottomNavigation() {
       <App1 index={value} onClick={setValue} />
       <hr />
       <App2 index={value} onClick={setValue} />
-    </userContext.Provider>
+    </div>
   )
 }
